@@ -1,0 +1,45 @@
+@import "../../sass/index.scss";
+
+.menu {
+    width: 300px;
+    height: 100vh;
+    background-color: $mainColor;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 98;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    &-main {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-weight: 300;
+        font-size: 40px;
+        width: 60%;
+
+        
+        .menu-item {
+            margin-bottom: 25px;
+
+            .menu-link {
+                font-size: inherit;
+                color: white;
+            }
+
+            &:hover {
+                font-weight: 500;
+            }
+        }
+    }
+
+}
