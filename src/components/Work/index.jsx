@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { memo } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import './style.scss'
 
-export default function Work() {
+const Work = (props) => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const data = [
         {
@@ -38,6 +39,25 @@ export default function Work() {
             ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
             : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
     }
+
+    const nextSlide = useCallback(
+        () => {
+            const index = currentSlide + 1 === data.length ? 0 : currentSlide + 1
+            setCurrentSlide(index)
+        },
+        [currentSlide, data.length]
+    )
+
+    useEffect(() => {
+        if (props.auto) {
+            const slideAuto = setInterval(() => {
+                nextSlide()
+            }, 5000)
+            return () => {
+                clearInterval(slideAuto)
+            }
+        }
+    }, [nextSlide, props])
 
     return (
         <div className="work" id="work">
@@ -80,3 +100,5 @@ export default function Work() {
         </div>
     )
 }
+
+export default memo(Work)

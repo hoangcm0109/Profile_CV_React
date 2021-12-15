@@ -19,7 +19,7 @@ function App() {
       <div className="section">
         <Intro />
         <Portfolio />
-        <Work />
+        <Work auto={true} />
         <Comment />
         <Contact />
       </div>
