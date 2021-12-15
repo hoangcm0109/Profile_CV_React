@@ -1,0 +1,109 @@
+@import "../../sass/index.scss";
+
+.work {
+    background-color: #516BEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow {
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+
+        &.left {
+            left: 150px;
+            transform: rotate(180deg);
+        }
+        &.right {
+            right: 150px;
+        }
+    }
+
+
+    .slider {
+        height: 600px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 0.5s ease;
+
+        .container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item {
+                width: 60%;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .left {
+                    flex: 4;
+                    height: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .leftContainer {
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+
+                        .imgContainer {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            background-color: #516BEB;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            img {
+                                width: 40px;
+                            }
+                        }
+
+                        h2 {
+                            font-size: 40px;
+                        }
+
+                        p {
+                            font-size: 30px;
+                        }
+                        
+                        span {
+                            font-size: 25px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .right {
+                    flex: 8;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
