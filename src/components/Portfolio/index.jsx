@@ -69,6 +69,7 @@ return (
             {
                 list.map(item => (
                     <PortfolioList
+                        key={item.id}
                         title={item.title}
                         active={selected === item.id}
                         setSelected={setSelected}
@@ -80,7 +81,7 @@ return (
         <div className="container">
             {
                 data.map(item => (
-                    <div className="item">
+                    <div className="item" key={item.id}>
                         <img src={item.img} alt="" />
                         <h3>{item.title}</h3>
                     </div>

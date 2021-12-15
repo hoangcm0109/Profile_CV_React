@@ -40,7 +40,7 @@ export default function Comment() {
             <div className="container">
                 {
                     data.map(item => (
-                        <div className={item.featured ? "card featured" : "card"}>
+                        <div className={item.featured ? "card featured" : "card"} key={item.id}>
                             <div className="top">
                                 <img src="assets/right-arrow.png" alt="" className="left" />
                                 <img src={item.img} alt="" className="user" />

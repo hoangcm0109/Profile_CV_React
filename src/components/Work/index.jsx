@@ -48,23 +48,23 @@ const Work = (props) => {
         [currentSlide, data.length]
     )
 
-    useEffect(() => {
-        if (props.auto) {
-            const slideAuto = setInterval(() => {
-                nextSlide()
-            }, 5000)
-            return () => {
-                clearInterval(slideAuto)
-            }
-        }
-    }, [nextSlide, props])
+    // useEffect(() => {
+    //     if (props.auto) {
+    //         const slideAuto = setInterval(() => {
+    //             nextSlide()
+    //         }, 5000)
+    //         return () => {
+    //             clearInterval(slideAuto)
+    //         }
+    //     }
+    // }, [nextSlide, props])
 
     return (
         <div className="work" id="work">
             <div className="slider" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
                 {
                     data.map(item => (
-                        <div className="container">
+                        <div className="container" key={item.id}>
                             <div className="item">
                                 <div className="left">
                                     <div className="leftContainer">

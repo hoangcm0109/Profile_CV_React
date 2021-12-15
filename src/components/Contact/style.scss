@@ -4,6 +4,10 @@
     // background-color: lightblue;
     display: flex;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     .left {
         flex: 1;
 
@@ -21,6 +25,10 @@
 
         h2 {
             font-size: 70px;
+
+            @include mobile {
+                font-size: 40px;
+            }
         }
 
         form {
@@ -37,6 +45,12 @@
                 font-size: 40px;
                 border-radius: 5px;
                 padding: 0 20px;
+
+                @include mobile {
+                    font-size: 15px;
+                    width: 200px;
+                    height: 30px;
+                }
             }
 
             textarea {
@@ -45,6 +59,12 @@
                 font-size: 40px;
                 border-radius: 5px;
                 padding: 20px;
+
+                @include mobile {
+                    font-size: 15px;
+                    width: 200px;
+                    height: 100px;
+                }
             }
             button {
                 width: 150px;
