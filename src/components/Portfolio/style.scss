@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile {
+        margin-top: 20px;
+    }
+
     h1 {
         font-size: 50px;
         color: #516BEB;
@@ -16,6 +20,12 @@
         padding: 0;
         list-style: none;
         display: flex;
+
+        @include mobile {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     .container {
@@ -24,6 +34,10 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include mobile {
+            width: 100%;
+        }
 
         .item {
             width: 300px;
@@ -38,6 +52,11 @@
             position: relative;
             transition: all 0.5s ease;
             cursor: pointer;
+
+            @include mobile {
+                width: 150px;
+                height: 120px;
+            }
 
             h3 {
                 position: absolute;

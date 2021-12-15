@@ -19,9 +19,9 @@ function App() {
       <div className="section">
         <Intro />
         <Portfolio />
-        <Work auto={true} />
+        {/* <Work auto={true} />
         <Comment />
-        <Contact />
+        <Contact /> */}
       </div>
     </div>
   );

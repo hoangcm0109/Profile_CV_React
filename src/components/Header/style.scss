@@ -10,12 +10,23 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     z-index: 99;
     transition: all 1s ease;
+    
+    @include mobile {
+        display: flex;
+        align-items: center;
+    }
 
     .wrapper {
         padding: 10px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mobile {
+            width: 100%;
+            padding: 0;
+            justify-content: space-around;
+        }
 
         .left {
             display: flex;
@@ -27,6 +38,10 @@
                 color: #516BEB;
                 margin-right: 40px;
                 
+
+                @include mobile {
+                    font-size: 30px; 
+                }
             }
             .itemContainer {
                 display: flex;
@@ -41,6 +56,10 @@
                 .link {
                     font-weight: 500;
                     color: inherit;
+
+                    @include mobile {
+                        display: none;
+                    }
                 }
             }
         }
